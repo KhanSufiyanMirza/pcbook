@@ -1,7 +1,7 @@
 syntax = "proto3";
 package sufiyan.pcbook;
 
-option go_package = "sufiyan.pb";
+option go_package = "pb";
 import "processor_message.proto";
 import "memory_message.proto";
 import "storage_message.proto";
@@ -15,7 +15,7 @@ message Laptop {
   string name = 3;
   CPU cpu = 4;
   repeated GPU gpu = 5;
-  Memory memory = 6;
+  Memory ram = 6;
   repeated Storage storage = 7;
   Screen screen = 8;
   Keyboard keyboard = 9;

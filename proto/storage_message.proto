@@ -1,7 +1,7 @@
 syntax = "proto3";
 import "memory_message.proto";
 package sufiyan.pcbook;
-option go_package = "sufiyan.pb";
+option go_package = "pb";
 
 message Storage {
   enum Driver {
