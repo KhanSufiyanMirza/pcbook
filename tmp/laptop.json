@@ -1,0 +1,62 @@
+{
+  "id": "cd3316ab-efd9-46da-b8c0-7411f04fcc91",
+  "brand": "Apple",
+  "name": "Macbook Pro",
+  "cpu": {
+    "brand": "AMD",
+    "name": "Rayze 3",
+    "number_cores": 6,
+    "number_threads": 7,
+    "min_ghz": 2.0377510609660012,
+    "max_ghz": 2.990708805080809
+  },
+  "gpu": [
+    {
+      "brand": "AMD",
+      "name": "Rx 580",
+      "min_ghz": 1.2497740879978714,
+      "max_ghz": 1.326726479203058,
+      "memory": {
+        "unit": "GIGABYTE",
+        "value": "6"
+      }
+    }
+  ],
+  "ram": {
+    "unit": "GIGABYTE",
+    "value": "49"
+  },
+  "storage": [
+    {
+      "driver": "HDD",
+      "memory": {
+        "unit": "GIGABYTE",
+        "value": "464"
+      }
+    },
+    {
+      "driver": "SSD",
+      "memory": {
+        "unit": "GIGABYTE",
+        "value": "696"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 16.389692,
+    "resolution": {
+      "width": 7678,
+      "height": 4319
+    },
+    "panel": "OLED",
+    "multitouch": true
+  },
+  "keyboard": {
+    "layout": "QWERTY",
+    "backlit": false
+  },
+  "weight_kg": 2.2535418363034214,
+  "price_usd": 1905.324578330392,
+  "release_year": 2022,
+  "updated_at": "2022-03-24T16:08:01.662350668Z"
+}
