@@ -17,7 +17,7 @@ import (
 func TestClientCreateLaptop(t *testing.T) {
 	t.Parallel()
 	laptopStore := NewInMemoryLaptopStore()
-	serverAddress := startTestLaptopServer(t, laptopStore, nil)
+	serverAddress := startTestLaptopServer(t, laptopStore, nil, nil)
 	laptopServiceClient := newTestLaptopServiceClient(t, serverAddress)
 
 	laptop := sample.NewLaptop()
@@ -37,8 +37,8 @@ func TestClientCreateLaptop(t *testing.T) {
 	//check that the saved laptop is the same as the one we send
 	requireSameLaptop(t, laptop, other)
 }
-func startTestLaptopServer(t *testing.T, laptopStore LaptopStore, imageStore ImageStore) string {
-	laptopServer := NewLaptopServer(laptopStore, imageStore)
+func startTestLaptopServer(t *testing.T, laptopStore LaptopStore, imageStore ImageStore, ratingStore RatingStore) string {
+	laptopServer := NewLaptopServer(laptopStore, imageStore, ratingStore)
 	grpcServer := grpc.NewServer()
 
 	pb.RegisterLaptopServiceServer(grpcServer, laptopServer)
@@ -109,7 +109,7 @@ func TestClientSearchLaptop(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	serverAddress := startTestLaptopServer(t, laptopStore, nil)
+	serverAddress := startTestLaptopServer(t, laptopStore, nil, nil)
 	laptopClient := newTestLaptopServiceClient(t, serverAddress)
 
 	req := &pb.SearchLaptopRequest{Filter: filter}
